@@ -1,0 +1,85 @@
+:root {
+  --shimmer-color: #c8c8c8;
+  --shimmer-color-highlight: #d9d9d9;
+}
+
+.shimmer-card {
+  height: 320px;
+  width: 230px;
+  border-radius: 8px;
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-color) 25%,
+    var(--shimmer-color-highlight) 50%,
+    var(--shimmer-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+.img-cont-shimmer{
+  width: 500px;
+  height: 240px;
+  border-radius: 4px;
+}
+
+.shimmer-card2{
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-color) 25%,
+    var(--shimmer-color-highlight) 50%,
+    var(--shimmer-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+}
+
+.pshimmer{
+  background: linear-gradient(
+    90deg,
+    var(--shimmer-color) 25%,
+    var(--shimmer-color-highlight) 50%,
+    var(--shimmer-color) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite linear;
+  border-radius: 6px;
+}
+
+.pinsider{
+  height: 28px;
+}
+
+
+.country-main.dark-mode .img-cont-shimmer,
+.country-main.dark-mode .shimmer-card2,
+.country-main.dark-mode .pshimmer {
+  --shimmer-color: hsl(209, 14%, 33%);
+  --shimmer-color-highlight: hsl(208, 14%, 45%);
+}
+
+@media (max-width:800px) {
+  .pinsider{
+    height: 28px;
+    width: 200px;
+  }
+  .img-cont-shimmer{
+    width: 100%;
+    max-width: 70%;
+    height: 220px;
+  }
+}
+@media (max-width:550px) {
+  .pinsider{
+    height: 28px;
+    width: 120px;
+  }
+}
