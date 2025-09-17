@@ -75,7 +75,7 @@ export default function CountryDetail2() {
   }
   useEffect(() => {
     if(location.state){
-      data = location.state
+     const data = location.state
       updateCountryData(data);
       console.log("State Data used!");
       return;
