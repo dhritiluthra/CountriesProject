@@ -114,8 +114,8 @@ export default function CountryDetail2() {
           <i className="material-symbols-outlined">keyboard_backspace</i>
           Back
         </a>
-        {/* {!countryData ? <CountryDetailShimmer/> :  */}
-        {true ? <CountryDetailShimmer/> : 
+        {!countryData ? <CountryDetailShimmer/> : 
+        {/*{true ? <CountryDetailShimmer/> :  */}
         <div className="country-info">
           <img src={countryData.flagSvg} alt={countryName + " flag"} />
           <div className="country-text-con">
