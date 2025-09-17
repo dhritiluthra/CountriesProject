@@ -110,12 +110,11 @@ export default function CountryDetail2() {
   return (
     <main className={`country-main ${isDark? "dark-mode" : ""}`}>
       <div className="country-details">
-        <a className="back-button" onClick={() => history.back()}>
+        <a className="back-button" onClick={() => window.history.back()}>
           <i className="material-symbols-outlined">keyboard_backspace</i>
           Back
         </a>
         {!countryData ? <CountryDetailShimmer/> : 
-        {/*{true ? <CountryDetailShimmer/> :  */}
         <div className="country-info">
           <img src={countryData.flagSvg} alt={countryName + " flag"} />
           <div className="country-text-con">
