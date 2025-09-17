@@ -1,12 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const ThemeContext = createContext();
 
 export const ThemeContextProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(() => {
+  const [isDark, setIsDark] = useState(false);  // default false first
+
+  useEffect(() => {
     const saved = localStorage.getItem("IsDarkMode");
-    return saved ? JSON.parse(saved) : false;
-  });
+    if (saved) {
+      setIsDark(JSON.parse(saved));
+    }
+  }, []);
 
   return (
     <ThemeContext.Provider value={[isDark, setIsDark]}>
