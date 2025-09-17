@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import useTheme from "../hooks/useTheme";
 
 export default function Header() {
-  [isDark, setIsDark] = useTheme();
+  const [isDark, setIsDark] = useTheme();
   return (
     <header className={`header-container ${isDark? "dark-mode" : ""}`}>
       <div className="header-content">
