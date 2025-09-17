@@ -2,7 +2,7 @@ import React from 'react'
 import useTheme from '../hooks/useTheme';
 
 export default function Footer() {
-  [isDark] = useTheme();
+  const [isDark] = useTheme();
   return (
     <footer className={`footer ${isDark ? "dark-mode" : ""}`}>
       <div>© 2025 My Website. All rights reserved.</div>
